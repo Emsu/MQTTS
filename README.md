@@ -11,7 +11,8 @@ conda activate mqtts
 conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge
 pip install -r requirements.txt  # must be conda pip
 ```
-(Update) You may need to create an access token to use the speaker embedding of pyannote as they updated their policy.
+(Update) You may need to create a [huggingface access token](https://huggingface.co/settings/tokens) to use the speaker embedding of pyannote as they updated their policy. Accept the policy [here](https://huggingface.co/pyannote/embedding). A hugginface account is required. Login via the [huggingface-cli](https://huggingface.co/docs/huggingface_hub/installation).
+
 If that's the case follow the [pyannote repo](https://github.com/pyannote/pyannote-audio) and change every `Inference("pyannote/embedding", window="whole")` accordingly.
 
 2. Download the pretrained phonemizer checkpoint
