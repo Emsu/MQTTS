@@ -9,7 +9,7 @@
 conda create --name mqtts python=3.9
 conda activate mqtts
 conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge
-pip install -r requirements.txt
+pip install -r requirements.txt  # must be conda pip
 ```
 (Update) You may need to create an access token to use the speaker embedding of pyannote as they updated their policy.
 If that's the case follow the [pyannote repo](https://github.com/pyannote/pyannote-audio) and change every `Inference("pyannote/embedding", window="whole")` accordingly.
